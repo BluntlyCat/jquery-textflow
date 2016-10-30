@@ -21,16 +21,16 @@ Then, before the closing ```<body>``` tag add:
 
 Option | Type | Default | Description
 ------ | ---- | ------- | -----------
-width | mixed | 100% | Sets the width in relation of the parent node (Any valid css unit)
-height | mixed | 200px | Sets the height (Any valid css unit)
-top | mixed | 0 | Sets the top position within the parent node (Any valid css unit)
-left | mixed | 0 | Sets the left position within the parent node (Any valid css unit)
+width | string/int: Any valid css unit | 100% | Sets the width in relation of the parent node
+height | string/int: Any valid css unit | 200px | Sets the height
+top | string/int: Any valid css unit | 0 | Sets the top position within the parent node
+left | string/int: Any valid css unit | 0 | Sets the left position within the parent node
 maxTexts | int | 15 | Sets the maximum amount of texts that are simultaneously shown
 marginTop | int | 25 | The space in pixel between the top border and the text
 marginBottom | int | 0 | The space in pixel between the bottom border and the text
 texts | array | ['Add', ... 'here'] | The texts that are shown
-color | string | #000 | The text color (Any valid css unit)
-background | string | transparent | The background color (Any valid css unit) of the canvas (This is actually not needed because the background of the textflow div can be set in css. However it might happen that this could be useful for some reason so it is there... :)
+color | string: Any valid css unit | #000 | The text color
+background | string: Any valid css unit | transparent | The background color of the canvas (This is actually not needed because the background of the textflow div can be set in css. However it might happen that this could be useful for some reason so it is there... :)
 font | string | sans-serif | The font family of the texts
 
 #### Methods
@@ -64,12 +64,13 @@ Initialize with:
 $(element).textFlow({
   texts: ['Your', 'Text', 'Here']
 });
- ```
- 
- 
- #### Dependencies
+```
 
+
+#### Dependencies
+ 
 jQuery 1.3
+
 
 #### License
 
