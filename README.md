@@ -77,5 +77,3 @@ jQuery 1.3
 Copyright (c) 2014 Michael Jünger
 
 Licensed under the MIT license.
-
-Free as in Bacon.
