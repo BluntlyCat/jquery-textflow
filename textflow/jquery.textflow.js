@@ -273,13 +273,10 @@
         this.marginTop = marginTop;
         this.marginBottom = marginBottom;
 
-        this.resize = function (width, height, marginTop, marginBottom)
+        this.resize = function (width, height)
         {
             self.width = width;
             self.height = height;
-
-            self.marginTop = marginTop;
-            self.marginBottom = marginBottom;
         };
 
         this.start = function ()
@@ -680,17 +677,9 @@
 
         window.onresize = function ()
         {
-            viewcase.css({
-                'width': settings.width,
-                'height': settings.height,
-                'top': settings.top,
-                'left': settings.left,
-                'position': 'relative'
-            });
-
             view.resize();
             world.resize(viewcase.outerWidth(), viewcase.outerHeight());
-            textWriter.resize(viewcase.outerWidth(), viewcase.outerHeight(), settings.marginTop, settings.marginBottom);
+            textWriter.resize(view.size().width, view.size().height);
         };
 
         document.addEventListener('visibilitychange', function ()
@@ -705,17 +694,6 @@
             }
         });
 
-        document.addEventListener('keyup', function (e)
-        {
-            if (e.keyCode === 27)
-                if (active)
-                {
-                    stop();
-                }
-                else
-                {
-                    start();
-                }
-        });
+        return this;
     };
 })(jQuery);
