@@ -675,12 +675,12 @@
 
         initialize();
 
-        window.onresize = function ()
+        $(window).resize(function ()
         {
             view.resize();
             world.resize(viewcase.outerWidth(), viewcase.outerHeight());
             textWriter.resize(view.size().width, view.size().height);
-        };
+        });
 
         document.addEventListener('visibilitychange', function ()
         {
