@@ -2,7 +2,7 @@
 
 [1]: <https://github.com/kenwheeler/slick>
 
-_A JQuery plugin showing animated texts
+A JQuery plugin showing animated texts
 
 #####Example using
 
@@ -44,8 +44,6 @@ var textflow = $('.your-element').textFlow({options...});
 
 // Stop textflow
 textflow.stopTextFlow();
-// Get the current slide
-
 
 // Start textflow
 textflow.startTextFlow();
