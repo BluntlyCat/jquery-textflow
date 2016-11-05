@@ -2,19 +2,19 @@
 
 A jQuery plugin showing animated texts. Available as [pure jquery plugin] (#jquery) or as [django app] (#django).
 
-## Table of contents
-1. [jQuery Only] (#jquery)
-2. [Django App] (#django)
-  2.1 [Django multilingual support] (#multilingual)
-4. [Settings] (#settings)
-5. [Methods] (#methods)
-6. [Dependencies] (#dependencies)
-7. [License] (#license)
+# Table of contents
+* [jQuery Only] (#jquery)
+* [Django App] (#django)
+    * [Django multilingual support] (#multilingual)
+* [Settings] (#settings)
+* [Methods] (#methods)
+* [Dependencies] (#dependencies)
+* [License] (#license)
 
 
-## <a name="jquery"></a> jQuery Only
+# <a name="jquery"></a> jQuery Only
 
-###Example using
+##Example using
 
 Add a link to the css file in your `<head>`:
 ```html
@@ -70,9 +70,12 @@ $(document).ready(function() {
 The plugin is now ready and you should see your texts.
 
 
-## <a name="django"></a> Django App
+***
 
-###Example using
+
+# <a name="django"></a> Django App
+
+##Example using
 
 Install textflow using pip.
 
@@ -175,6 +178,10 @@ $(document).ready(function() {
 
 You are done and you should see your texts now.
 
+
+***
+
+
 ## <a name="multilingual"></a> Multilingual support
 
 You can add multilingual texts by installing the [django-modeltranslation] (https://github.com/deschler/django-modeltranslation) app. This can be done even if you have already created texts.
@@ -208,7 +215,10 @@ Each FlowObject now should have a text field for each language. If you go to the
 Please refer to the official Django documentation for more information about [translation] (https://docs.djangoproject.com/el/1.10/topics/i18n/translation/#).
 
 
-## <a name="settings"></a> ## Settings
+***
+
+
+# <a name="settings"></a> Settings
 
 Option | Type | Default | Description
 ------ | ---- | ------- | -----------
@@ -225,7 +235,10 @@ background | string: Any valid css unit | transparent | The background color of 
 font | string | sans-serif | The font family of the texts
 
 
-## <a name="methods"></a> Methods
+***
+
+
+# <a name="methods"></a> Methods
 
 Methods are called on textflow instances:
 
@@ -248,7 +261,10 @@ Method | Argument | Description
 `stopTextFlow` | options : None | Stop textflow if active
 
 
-## <a name="dependencies"></a> Dependencies
+***
+
+
+# <a name="dependencies"></a> Dependencies
 
 jQuery 1.3
 
@@ -256,14 +272,17 @@ jQuery 1.3
 
 Django 1.8
 
-**For multilingual support (Django only)**
+##For multilingual support (Django only)
 
 django-modeltranslation
 
 Refer to the official [documentation] (http://django-modeltranslation.readthedocs.io/en/latest/installation.html) which version is required for your Django and Python combination
 
 
-## <a name="license"></a> License
+***
+
+
+# <a name="license"></a> License
 
 Copyright (c) 2014 Michael Jünger
 
