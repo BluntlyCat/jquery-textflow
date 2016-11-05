@@ -41,7 +41,7 @@ Then, before the closing ```<body>``` tag add:
 
 Now add the ```<div>``` tag within the ```<body>``` tag where you want to show the texts:
 
-**NOTE:** The ```data-texts``` attribute is optional. You can pass there your texts as a simple comma separated string but it is also possible to pass an array of texts through the settings in your javascript code as shown soon. If you use the ```data-texts``` attribute, the texts in the settings are ignored!
+**NOTE:** The ```data-texts``` attribute is optional. You can pass there your texts as a simple comma separated string but it is also possible to pass an array of texts through the settings in your javascript code as shown soon. If you use the ```data-texts``` attribute, the texts in the settings were ignored!
 
 ```html
 <head>
@@ -150,7 +150,7 @@ Then, before the closing ```<body>``` tag add:
 </body>
 ```
 
-Now add the ```<div>``` tag within the ```<body>``` tag where you want to show the texts:
+Now call the ```textflow``` tag within the ```<body>``` tag where you want to show the texts:
 
 ```django
 <head>
@@ -168,7 +168,7 @@ Now add the ```<div>``` tag within the ```<body>``` tag where you want to show t
 
 In your javascript file then add the initializing code
 
-**NOTE:** The texts are passed to the ```data-texts``` attribute directly by the template tag. Any texts defined in settings are ignored.
+**NOTE:** The texts are passed to the ```data-texts``` attribute directly by the template tag. Any texts defined in settings were ignored.
 
 ```javascript
 $(document).ready(function() {
