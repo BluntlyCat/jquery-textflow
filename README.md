@@ -3,18 +3,21 @@
 A jQuery plugin showing animated texts. Available as [pure jquery plugin] (#jquery) or as [django app] (#django).
 
 # Table of contents
-* [jQuery Only] (#jquery)
-* [Django App] (#django)
-    * [Django multilingual support] (#multilingual)
-* [Settings] (#settings)
-* [Methods] (#methods)
-* [Dependencies] (#dependencies)
-* [License] (#license)
+* [1. jQuery Only] (#jquery)
+    * [1.1 Example using] (#jquery-example)
+* [2. Django App] (#django)
+    * [2.1 Example using] (#django-example)
+    * [2.1 Django multilingual support] (#multilingual)
+* [3. Settings] (#settings)
+* [4. Methods] (#methods)
+* [5. Dependencies] (#dependencies)
+    * [5.1 Multilingual support (Django only)] (#dependenvćies-multilingual)
+* [6. License] (#license)
 
 
-# <a name="jquery"></a> jQuery Only
+# <a name="jquery"></a> 1. jQuery Only
 
-##Example using
+## <a name="jquery-example"></a> 1.1 Example using
 
 Add a link to the css file in your `<head>`:
 ```html
@@ -73,9 +76,9 @@ The plugin is now ready and you should see your texts.
 ***
 
 
-# <a name="django"></a> Django App
+# <a name="django"></a> 2. Django App
 
-##Example using
+## <a name="django-example"></a> 2.1 Example using
 
 Install textflow using pip.
 
@@ -182,7 +185,7 @@ You are done and you should see your texts now.
 ***
 
 
-## <a name="multilingual"></a> Multilingual support
+## <a name="multilingual"></a> 2.2 Multilingual support
 
 You can add multilingual texts by installing the [django-modeltranslation] (https://github.com/deschler/django-modeltranslation) app. This can be done even if you have already created texts.
 
@@ -218,7 +221,7 @@ Please refer to the official Django documentation for more information about [tr
 ***
 
 
-# <a name="settings"></a> Settings
+# <a name="settings"></a> 3. Settings
 
 Option | Type | Default | Description
 ------ | ---- | ------- | -----------
@@ -238,7 +241,7 @@ font | string | sans-serif | The font family of the texts
 ***
 
 
-# <a name="methods"></a> Methods
+# <a name="methods"></a> 4. Methods
 
 Methods are called on textflow instances:
 
@@ -264,7 +267,7 @@ Method | Argument | Description
 ***
 
 
-# <a name="dependencies"></a> Dependencies
+# <a name="dependencies"></a> 5. Dependencies
 
 jQuery 1.3
 
@@ -272,7 +275,7 @@ jQuery 1.3
 
 Django 1.8
 
-##For multilingual support (Django only)
+## <a name="dependenvćies-multilingual"></a> 5.1 Multilingual support (Django only)
 
 django-modeltranslation
 
@@ -282,7 +285,7 @@ Refer to the official [documentation] (http://django-modeltranslation.readthedoc
 ***
 
 
-# <a name="license"></a> License
+# <a name="license"></a> 6. License
 
 Copyright (c) 2014 Michael Jünger
 
