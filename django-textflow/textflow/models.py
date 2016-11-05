@@ -20,6 +20,8 @@ class FlowObject(models.Model):
             else:
                 texts = str(flow_object)
 
+        return texts
+
     def __str__(self):
         return self.text
 

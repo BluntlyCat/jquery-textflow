@@ -1,0 +1,3 @@
+django-textflow/*
+!django-textflow/textflow
+django-textflow/textflow/static/.sass-cache
