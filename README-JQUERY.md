@@ -1,6 +1,6 @@
 # jquery-textflow
 
-[1]: <https://github.com/kenwheeler/slick>
+[1]: <https://github.com/mhaze4/jquery-textflow>
 
 A JQuery plugin showing animated texts
 
