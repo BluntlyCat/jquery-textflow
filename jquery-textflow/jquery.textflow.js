@@ -1,13 +1,12 @@
-/*
+/*!
+ * Version: 1.00
+ * Author: Michael Jünger
+ * Website: https://michael.xn--jnger-kva.name
+ * Docs: https://github.com/mhaze4/jquery-textflow
+ * Repo: https://github.com/mhaze4/jquery-textflow
+ * Issues: https://github.com/mhaze4/jquery-textflow/issues
+*/
 
- Version: 1.00
- Author: Michael Jünger
- Website: https://michael.xn--jnger-kva.name
- Docs: https://github.com/mhaze4/jquery-textflow
- Repo: https://github.com/mhaze4/jquery-textflow
- Issues: https://github.com/mhaze4/jquery-textflow/issues
- */
-/* global window, document, define, jQuery, setInterval, clearInterval */
 (function ($)
 {
     /********************************************/
@@ -296,7 +295,7 @@
     /********************************************/
     /********************************************/
 
-    var TextFlowView = function (settings, target, world, width, height, top, left)
+    var TextFlowView = function (settings, target, world)
     {
         var self = this;
 
@@ -337,16 +336,14 @@
             renderId = requestAnimationFrame(renderView);
         };
 
-        this.resize = function (top, left)
+        this.resize = function ()
         {
             textCanvas.attr('width', target.width());
             textCanvas.attr('height', target.height());
 
             textCanvas.css({
                 'width': target.width() + 'px',
-                'height': target.height() + 'px',
-                'top': top ? top + 'px' : 0,
-                'left': left ? left + 'px' : 0
+                'height': target.height() + 'px'
             });
         };
 
@@ -381,11 +378,21 @@
             self.clear();
         };
 
-        textCanvas.css({'position': 'absolute', 'z-index': 2, 'background': 'transparent'});
+        textCanvas.css({
+            'position': 'absolute',
+            'z-index': 2,
+            'background': 'transparent',
+            'width': target.width() + 'px',
+            'height': target.height() + 'px',
+            'top': settings.top,
+            'left': settings.left
+        });
+
+        textCanvas.attr('width', target.width());
+        textCanvas.attr('height', target.height());
+
         target.css('background', settings.background);
         textCanvas.appendTo(target);
-
-        self.resize(width, height, top, left);
     };
 
     /********************************************/
@@ -631,6 +638,7 @@
             font: 'sans-serif'
         }, options);
 
+        var texts = $(this).attr('data-texts');
 
         var initialize = function ()
         {
@@ -647,15 +655,19 @@
                 'position': 'relative'
             });
 
-            if (!(settings.texts instanceof Array))
-                throw Error("Texts must be an array");
+            if(texts)
+                textArray = texts.split(',');
 
-            textArray = settings.texts;
+            else
+                textArray = settings.texts;
+
+            if (!(textArray instanceof Array))
+                throw Error("Texts must be an array");
 
             textDirection = new Direction(directions);
 
             world = new World(textDirection, viewcase.outerWidth(), viewcase.outerHeight());
-            view = new TextFlowView(settings, viewcase, world, settings.width, settings.height);
+            view = new TextFlowView(settings, viewcase, world);
 
             textWriter = new TextWriter(
                 settings,
