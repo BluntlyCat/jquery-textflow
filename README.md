@@ -1,9 +1,9 @@
 # jquery-textflow
 
-A JQuery plugin showing animated texts. Available as [pure jquery plugin] (#jquery) or as [django app] (#django).
+A jQuery plugin showing animated texts. Available as [pure jquery plugin] (#jquery) or as [django app] (#django).
 
 ## Table of contents
-1. [JQuery Only] (#jquery)
+1. [jQuery Only] (#jquery)
 2. [Django App] (#django)
   1. [Django multilingual support] (#multilingual)
 4. [Settings] (#settings)
@@ -12,7 +12,7 @@ A JQuery plugin showing animated texts. Available as [pure jquery plugin] (#jque
 7. [License] (#license)
 
 
-## <a name="jquery"></a> JQuery Only
+## <a name="jquery"></a> jQuery Only
 
 ###Example using
 
@@ -74,11 +74,14 @@ The plugin is now ready and you should see your texts.
 
 ###Example using
 
-Install textflow using pip.
+First copy the textflow folder to the root path of your Django project. 
 
-```bash
-pip install django-textflow
-```
+Your project root now should look like this: 
+
+* project-root
+ + project
+ + textflow
+ + manage.py
  
 Then open the ```settings.py``` file, find the ```INSTALLED_APPS``` section and enable the app.
 
