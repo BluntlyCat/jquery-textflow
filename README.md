@@ -74,14 +74,11 @@ The plugin is now ready and you should see your texts.
 
 ###Example using
 
-First copy the textflow folder to the root path of your Django project. 
+Install textflow using pip.
 
-Your project root now should look like this: 
-
-* project-root
- + project
- + textflow
- + manage.py
+```bash
+pip install django-textflow
+```
  
 Then open the ```settings.py``` file, find the ```INSTALLED_APPS``` section and enable the app.
 
