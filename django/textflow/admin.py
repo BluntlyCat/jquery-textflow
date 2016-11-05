@@ -7,7 +7,7 @@ except ImportError:
     TranslationAdmin = admin.ModelAdmin
     ADMIN_MODEL = TranslationAdmin
 
-from django_textflow.models import FlowObject
+from textflow.models import FlowObject
 # Register your models here.
 
 

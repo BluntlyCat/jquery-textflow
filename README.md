@@ -74,13 +74,13 @@ The plugin is now ready and you should see your texts.
 
 ###Example using
 
-First copy the django_textflow folder to the root path of your Django project. 
+First copy the textflow folder to the root path of your Django project. 
 
 Your project root now should look like this: 
 
 * project-root
  + project
- + django_textflow
+ + textflow
  + manage.py
  
 Then open the ```settings.py``` file, find the ```INSTALLED_APPS``` section and enable the app.
@@ -88,7 +88,7 @@ Then open the ```settings.py``` file, find the ```INSTALLED_APPS``` section and 
 ```python
 INSTALLED_APPS = (
     ...
-    'django_textflow'
+    'textflow'
 )
 ```
 
@@ -96,11 +96,11 @@ Now we have to create the database model.
 Open a terminal and change to the root directory of your project and create the models
 ```bash
 cd path/to/project-root
-python manage.py makemigrations django_textflow
-python manage.py migrate django_textflow
+python manage.py makemigrations textflow
+python manage.py migrate textflow
 ```
 
-If the models where successfully created, you should see a new entry ```Django_Textflow``` on the admin page where you can add FlowObjects. 
+If the models where successfully created, you should see a new entry ```Textflow``` on the admin page where you can add FlowObjects. 
 Create a few entries just to proof if the app works correctly later.
 
 If the texts are created we need to pass them to the template. So open your ```views.py``` file and go to the view where you want your texts to appear. 
@@ -109,7 +109,7 @@ Import the ```FlowObject``` model and pass the texts to the view by simply call 
 
 ```python
 from django.shortcuts import render
-from django_textflow.models import FlowObject
+from textflow.models import FlowObject
 ...
 def your_view(request):
   ...
@@ -194,7 +194,7 @@ Enable the app in ```settings.py```:
 INSTALLED_APPS = (
     ...
     'modeltranslation',
-    'django_textflow',
+    'textflow',
 )
 ```
 
@@ -202,8 +202,8 @@ Update your models:
 
 ```bash
 cd path/to/project-root
-python manage.py makemigrations django_textflow
-python manage.py migrate django_textflow
+python manage.py makemigrations textflow
+python manage.py migrate textflow
 ```
 
 Each FlowObject now should have a text field for each language. If you go to the admin page and open a FlowObject or if you create a new one, you can see that there is no text field anymore. They are all replaced by fields like ```text_de_de``` or ```text_en_gb```, depending on the languages you have enabled.
@@ -252,8 +252,18 @@ Method | Argument | Description
 
 
 ## <a name="dependencies"></a> Dependencies
- 
+
 jQuery 1.3
+
+**For Django also**
+
+Django 1.8
+
+**For multilingual support (Django only)**
+
+django-modeltranslation
+
+Refer to the official [documentation] (http://django-modeltranslation.readthedocs.io/en/latest/installation.html) which version is required for your Django and Python combination
 
 
 ## <a name="license"></a> License
