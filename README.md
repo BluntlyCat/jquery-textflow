@@ -5,7 +5,7 @@ A jQuery plugin showing animated texts. Available as [pure jquery plugin] (#jque
 ## Table of contents
 1. [jQuery Only] (#jquery)
 2. [Django App] (#django)
-  1. [Django multilingual support] (#multilingual)
+  2.1 [Django multilingual support] (#multilingual)
 4. [Settings] (#settings)
 5. [Methods] (#methods)
 6. [Dependencies] (#dependencies)
