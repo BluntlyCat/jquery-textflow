@@ -99,7 +99,6 @@ Now we have to create the database model.
 Open a terminal and change to the root directory of your project and create the models
 ```bash
 cd path/to/project-root
-python manage.py makemigrations textflow
 python manage.py migrate textflow
 ```
 
@@ -209,8 +208,7 @@ Update your models:
 
 ```bash
 cd path/to/project-root
-python manage.py makemigrations textflow
-python manage.py migrate textflow
+python manage.py migrate
 ```
 
 Each FlowObject now should have a text field for each language. If you go to the admin page and open a FlowObject or if you create a new one, you can see that there is no text field anymore. They are all replaced by fields like ```text_de_de``` or ```text_en_gb```, depending on the languages you have enabled.
