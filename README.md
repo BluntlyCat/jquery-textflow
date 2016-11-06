@@ -99,7 +99,7 @@ Now we have to create the database model.
 Open a terminal and change to the root directory of your project and create the models
 ```bash
 cd path/to/project-root
-python manage.py migrate textflow
+python manage.py migrate
 ```
 
 If the models where successfully created, you should see a new entry ```Textflow``` on the admin page where you can add FlowObjects. 
